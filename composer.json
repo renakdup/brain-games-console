@@ -1,0 +1,14 @@
+{
+    "name": "renakdup/php-project-lvl1",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "renakdup",
+            "email": "renakdup@gmail.com"
+        }
+    ],
+    "bin": [
+	"bin/brain-games"
+    ],
+    "require": {}
+}
