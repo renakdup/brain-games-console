@@ -4,4 +4,4 @@ require(dirname(__DIR__) . '/vendor/autoload.php');
 
 use function \BrainGames\Cli\run;
 
-run('brain-games');
+run('brain-even');
