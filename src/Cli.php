@@ -3,11 +3,17 @@
 namespace BrainGames\Cli;
 
 use function cli\line;
-use function cli\prompt;
 
-function run()
+function run($game)
 {
-    line('Welcome to the Brain Game!');
-    $name = prompt('May I have your name?');
-    line("Hello, %s!", $name);
+    switch ($game) {
+        case 'brain-even':
+            require 'inc/brain-even.php';
+            break;
+        case 'brain-games':
+            require 'inc/brain-games.php';
+            break;
+        default:
+            line('Game not found');
+    }
 }
