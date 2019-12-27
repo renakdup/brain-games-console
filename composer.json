@@ -16,7 +16,7 @@
         "squizlabs/php_codesniffer": "*"
     },
     "autoload": {
-    	"files": ["src/Cli.php"]
+    	"files": ["src/core.php"]
     },
     "require-dev": {
     },
