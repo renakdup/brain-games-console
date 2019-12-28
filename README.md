@@ -6,6 +6,12 @@
 
 [![Build Status](https://travis-ci.org/renakdup/php-project-lvl1.svg?branch=master)](https://travis-ci.org/renakdup/php-project-lvl1)
 
+**Достпуные игры**
+- brain-even
+- brain-calc
+- brain-gdc
+- brain-progression
+
 Для установки composer пакета глобально необходимо:
 
 - Установить пакет глобально
@@ -25,9 +31,10 @@
 
     `source .bashrc`
     
+`brain-gdc` инструкция
+    
 [![asciicast](https://asciinema.org/a/PnQjCVNlWriIlgOFwiY6LN69d.svg)](https://asciinema.org/a/PnQjCVNlWriIlgOFwiY6LN69d)
 
-**Достпуные игры**
-- brain-even
-- brain-calc
-- brain-gdc
+`brain-progressive` инструкция
+
+[![asciicast](https://asciinema.org/a/HSCUfQCk0Pv0apeQEDG3OyBxo.svg)](https://asciinema.org/a/HSCUfQCk0Pv0apeQEDG3OyBxo)
