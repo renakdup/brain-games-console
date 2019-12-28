@@ -38,3 +38,7 @@
 `brain-progressive` инструкция
 
 [![asciicast](https://asciinema.org/a/HSCUfQCk0Pv0apeQEDG3OyBxo.svg)](https://asciinema.org/a/HSCUfQCk0Pv0apeQEDG3OyBxo)
+
+`brain-prime` инструкция
+
+[![asciicast](https://asciinema.org/a/awN0SinTb19qJBV1zfma2CEah.svg)](https://asciinema.org/a/awN0SinTb19qJBV1zfma2CEah)
