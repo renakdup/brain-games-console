@@ -1,6 +1,6 @@
 <?php
 
-use function BrainGames\core\gameInterface;
+use function BrainGames\Src\Core\gameInterface;
 
 $instructions = 'Answer "yes" if the number is even, otherwise answer "no"';
 

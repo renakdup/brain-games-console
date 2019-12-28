@@ -1,6 +1,6 @@
 <?php
 
-use function BrainGames\core\gameInterface;
+use function BrainGames\Src\Core\gameInterface;
 
 $instructions = "What is the result of the expression?";
 

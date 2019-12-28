@@ -1,6 +1,6 @@
 <?php
 
-use function BrainGames\core\gameInterface;
+use function BrainGames\Src\Core\gameInterface;
 
 $instructions = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 

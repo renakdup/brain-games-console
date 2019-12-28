@@ -1,6 +1,6 @@
 <?php
 
-use function BrainGames\core\gameInterface;
+use function BrainGames\Src\Core\gameInterface;
 
 $instructions = "Find the greatest common divisor of given numbers";
 
