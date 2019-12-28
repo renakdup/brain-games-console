@@ -6,7 +6,7 @@
 
 [![Build Status](https://travis-ci.org/renakdup/php-project-lvl1.svg?branch=master)](https://travis-ci.org/renakdup/php-project-lvl1)
 
-Для установки composer пакета глобально необхрдимо:
+Для установки composer пакета глобально необходимо:
 
 - Установить пакет глобально
 
@@ -24,3 +24,10 @@
 - Для перезагрузки `.bashrc` запустить команду
 
     `source .bashrc`
+    
+[![asciicast](https://asciinema.org/a/PnQjCVNlWriIlgOFwiY6LN69d.svg)](https://asciinema.org/a/PnQjCVNlWriIlgOFwiY6LN69d)
+
+**Достпуные игры**
+- brain-even
+- brain-calc
+- brain-gdc
