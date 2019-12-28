@@ -11,6 +11,7 @@
         "bin/brain-even",
         "bin/brain-calc",
         "bin/brain-gdc",
+        "bin/brain-prime",
         "bin/brain-progression"
     ],
     "require": {
