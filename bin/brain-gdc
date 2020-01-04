@@ -1,4 +1,4 @@
-#!/usr/bin/php7.2
+#!/usr/bin/env php7.2
 <?php
 
 $file_local = dirname(__DIR__) . '/vendor/autoload.php';
@@ -10,4 +10,6 @@ if (file_exists($file_local)) {
     require $file_global;
 }
 
-require __DIR__ . '/../src/games/brain-gdc.php';
+use function BrainGames\Src\Games\BrainGdc\run;
+
+run();
