@@ -1,14 +1,27 @@
 <?php
 
-namespace BrainGames\Src\Games\BrainPrime;
+namespace BrainGames\Src\Games\Prime;
 
 use function BrainGames\Src\Core\gameInterface;
 
-// Реализация взята из https://github.com/sabirsaid/isPrime
+function getInstruction()
+{
+    return 'Answer "yes" if given number is prime. Otherwise answer "no".';
+}
+
 function isPrimeNumber($number)
 {
-    return ($number > 1) && (($number % 2 >= 1) && ($number % 3 >= 1) && ($number % 5 >= 1))
-           || in_array($number, [2, 3, 5]);
+    if ($number < 2) {
+        return false;
+    }
+
+    for ($i = 2; $i <= sqrt($number); $i++) {
+        if ($number % $i === 0) {
+            return false;
+        }
+    }
+
+    return true;
 }
 
 function getQuestionData()
@@ -25,7 +38,7 @@ function getQuestionData()
 
 function run()
 {
-    $instructions = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+    $instructions = getInstruction();
 
     $getQuestionData = function () {
         return getQuestionData();
