@@ -10,6 +10,6 @@ if (file_exists($file_local)) {
     require $file_global;
 }
 
-use function BrainGames\Src\Games\Even\run;
+use function BrainGames\src\games\Even\run;
 
 run();

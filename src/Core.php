@@ -1,32 +1,32 @@
 <?php
 
-namespace BrainGames\Src\Core;
+namespace BrainGames\src\Core;
 
 use function cli\line;
 use function cli\prompt;
 
-function questionsRepeater($name, $getQuestionData, $questionsRepeatNumber)
+function askQuestions($name, $getQuestionData, $numberQuestions)
 {
-    for ($i = 0; $i < $questionsRepeatNumber; $i++) {
+    for ($i = 0; $i < $numberQuestions; $i++) {
         $questionData = $getQuestionData();
 
         $question = $questionData['question'];
         $trueAnswer = $questionData['trueAnswer'];
 
-        $answer = prompt('Question: ' . $question);
+        $answer = prompt("Question: {$question}");
 
-        line('Your answer: ' . $answer);
+        line("Your answer: {$answer}");
 
         if ($answer !== $trueAnswer) {
             line("'{$answer}' is wrong answer ;(. Correct answer was '{$trueAnswer}'.");
-            line('Let\'s try again, ' . $name . '!');
+            line("Let's try again, {$name}!");
             return;
         }
 
         line('Correct!');
     }
 
-    line('Congratulations, ' . $name . '!');
+    line("Congratulations, {$name}!");
 }
 
 /**
@@ -43,7 +43,7 @@ function gameInterface(string $instructions, callable $getQuestionData)
     $name = prompt('May I have your name?');
     line("Hello, %s!", $name);
 
-    $questionsRepeatNumber = 3;
+    $numberQuestions = 3;
 
-    questionsRepeater($instructions, $getQuestionData, $questionsRepeatNumber);
+    askQuestions($instructions, $getQuestionData, $numberQuestions);
 }

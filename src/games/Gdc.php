@@ -1,13 +1,10 @@
 <?php
 
-namespace BrainGames\Src\Games\Gdc;
+namespace BrainGames\src\games\Gdc;
 
-use function BrainGames\Src\Core\gameInterface;
+use function BrainGames\src\Core\gameInterface;
 
-function getInstruction()
-{
-    return 'Find the greatest common divisor of given numbers';
-}
+const INSTRUCTION = 'Find the greatest common divisor of given numbers';
 
 function getGdc($number1, $number2)
 {
@@ -22,7 +19,7 @@ function getGdc($number1, $number2)
     return $number1 + $number2;
 }
 
-function getQuestionData()
+function getQuestionAndTrueAnswer()
 {
     $number1 = rand(1, 100);
     $number2 = rand(1, 100);
@@ -39,10 +36,10 @@ function getQuestionData()
 
 function run()
 {
-    $instructions = getInstruction();
+    $instructions = INSTRUCTION;
 
     $getQuestionData = function () {
-        return getQuestionData();
+        return getQuestionAndTrueAnswer();
     };
 
     gameInterface($instructions, $getQuestionData);
