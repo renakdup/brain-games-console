@@ -25,11 +25,9 @@ function getQuestionAndTrueAnswer()
 
 function run()
 {
-    $instructions = INSTRUCTION;
-
-    $getQuestionData = function () {
+    $getData = function () {
         return getQuestionAndTrueAnswer();
     };
 
-    gameInterface($instructions, $getQuestionData);
+    gameInterface(INSTRUCTION, $getData);
 }

@@ -5,13 +5,15 @@ namespace BrainGames\src\Core;
 use function cli\line;
 use function cli\prompt;
 
-function askQuestions($name, $getQuestionData, $numberQuestions)
-{
-    for ($i = 0; $i < $numberQuestions; $i++) {
-        $questionData = $getQuestionData();
+const QUESTIONS_COUNT = 3;
 
-        $question = $questionData['question'];
-        $trueAnswer = $questionData['trueAnswer'];
+function playRound($name, $getData, $questionsCount)
+{
+    for ($i = 0; $i < $questionsCount; $i++) {
+        $data = $getData();
+
+        $question = $data['question'];
+        $trueAnswer = $data['trueAnswer'];
 
         $answer = prompt("Question: {$question}");
 
@@ -31,11 +33,10 @@ function askQuestions($name, $getQuestionData, $numberQuestions)
 
 /**
  * @param string   $instructions
- * @param callable $getQuestionData  При вызове должен возвращать массив со следущими элементами
- *                                        array( 'question' => string,
- *                                               'trueAnswer' => string )
+ * @param callable $getData  При вызове должен возвращать массив со следущими элементами
+ *                           array( 'question' => string, 'trueAnswer' => string )
  */
-function gameInterface(string $instructions, callable $getQuestionData)
+function gameInterface(string $instructions, callable $getData)
 {
     line('Welcome to the Brain Game!');
     line($instructions);
@@ -43,7 +44,5 @@ function gameInterface(string $instructions, callable $getQuestionData)
     $name = prompt('May I have your name?');
     line("Hello, %s!", $name);
 
-    $numberQuestions = 3;
-
-    askQuestions($instructions, $getQuestionData, $numberQuestions);
+    playRound($instructions, $getData, QUESTIONS_COUNT);
 }

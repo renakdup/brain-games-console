@@ -16,17 +16,16 @@ function getQuestionAndTrueAnswer()
     $entireProgressive = range($start, $end, $progressionStep);
 
     $missingNumberIndex = array_rand($entireProgressive);
-    $missingNumber = $entireProgressive[$missingNumberIndex];
+    $trueAnswer = $entireProgressive[$missingNumberIndex];
 
-    $getProgressionWithMissNumber = function ($progressive, $missingNumberIndex) {
+    $getQuestion = function ($progressive, $missingNumberIndex) {
         $progressive[$missingNumberIndex] = '..';
         return $progressive;
     };
 
-    $progressive = $getProgressionWithMissNumber($entireProgressive, $missingNumberIndex);
+    $progressive = $getQuestion($entireProgressive, $missingNumberIndex);
 
     $question = implode(' ', $progressive);
-    $trueAnswer = $missingNumber;
 
     return [
         'question'    => $question,
@@ -38,9 +37,9 @@ function run()
 {
     $instructions = INSTRUCTION;
 
-    $getQuestionData = function () {
+    $getData = function () {
         return getQuestionAndTrueAnswer();
     };
 
-    gameInterface($instructions, $getQuestionData);
+    gameInterface($instructions, $getData);
 }
