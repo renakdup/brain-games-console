@@ -1,13 +1,10 @@
 <?php
 
-namespace BrainGames\Src\Games\Calc;
+namespace BrainGames\src\games\Calc;
 
-use function BrainGames\Src\Core\gameInterface;
+use function BrainGames\src\Core\gameInterface;
 
-function getInstruction()
-{
-    return 'What is the result of the expression?';
-}
+const INSTRUCTION = 'What is the result of the expression?';
 
 function getSigns()
 {
@@ -37,7 +34,7 @@ function calculate($number1, $number2, $sign)
     return $result;
 }
 
-function getQuestionData()
+function getQuestionAndTrueAnswer()
 {
     $number1 = rand(0, 10);
     $number2 = rand(0, 10);
@@ -61,10 +58,10 @@ function getQuestionData()
 
 function run()
 {
-    $instructions = getInstruction();
+    $instructions = INSTRUCTION;
 
     $getQuestionData = function () {
-        return getQuestionData();
+        return getQuestionAndTrueAnswer();
     };
 
     gameInterface($instructions, $getQuestionData);

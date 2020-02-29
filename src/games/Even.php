@@ -1,20 +1,17 @@
 <?php
 
-namespace BrainGames\Src\Games\Even;
+namespace BrainGames\src\games\Even;
 
-use function BrainGames\Src\Core\gameInterface;
+use function BrainGames\src\Core\gameInterface;
 
-function getInstruction()
-{
-    return 'Answer "yes" if the number is even, otherwise answer "no"';
-}
+const INSTRUCTION = 'Answer "yes" if the number is even, otherwise answer "no"';
 
 function isEven($number)
 {
     return $number % 2 === 0;
 }
 
-function getQuestionData()
+function getQuestionAndTrueAnswer()
 {
     $question = rand(0, 100);
 
@@ -28,10 +25,10 @@ function getQuestionData()
 
 function run()
 {
-    $instructions = getInstruction();
+    $instructions = INSTRUCTION;
 
     $getQuestionData = function () {
-        return getQuestionData();
+        return getQuestionAndTrueAnswer();
     };
 
     gameInterface($instructions, $getQuestionData);
