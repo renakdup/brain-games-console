@@ -1,8 +1,13 @@
 <?php
 
-namespace BrainGames\Src\Games\BrainEven;
+namespace BrainGames\Src\Games\Even;
 
 use function BrainGames\Src\Core\gameInterface;
+
+function getInstruction()
+{
+    return 'Answer "yes" if the number is even, otherwise answer "no"';
+}
 
 function isEven($number)
 {
@@ -23,7 +28,7 @@ function getQuestionData()
 
 function run()
 {
-    $instructions = 'Answer "yes" if the number is even, otherwise answer "no"';
+    $instructions = getInstruction();
 
     $getQuestionData = function () {
         return getQuestionData();

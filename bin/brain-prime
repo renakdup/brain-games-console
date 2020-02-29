@@ -1,4 +1,4 @@
-#!/usr/bin/env php7.2
+#!/usr/bin/env php
 <?php
 
 $file_local = dirname(__DIR__) . '/vendor/autoload.php';
@@ -10,6 +10,6 @@ if (file_exists($file_local)) {
     require $file_global;
 }
 
-use function BrainGames\Src\Games\BrainPrime\run;
+use function BrainGames\Src\Games\Prime\run;
 
 run();

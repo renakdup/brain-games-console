@@ -26,11 +26,11 @@
     "autoload": {
     	"files": [
             "src/Core.php",
-            "src/games/Brain-calc.php",
-            "src/games/Brain-even.php",
-            "src/games/Brain-gdc.php",
-            "src/games/Brain-prime.php",
-            "src/games/Brain-progression.php"
+            "src/games/calc.php",
+            "src/games/even.php",
+            "src/games/gdc.php",
+            "src/games/prime.php",
+            "src/games/progression.php"
         ]
     },
     "require-dev": {
