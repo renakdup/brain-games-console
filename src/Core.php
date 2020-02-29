@@ -1,6 +1,6 @@
 <?php
 
-namespace BrainGames\core;
+namespace BrainGames\Src\Core;
 
 use function cli\line;
 use function cli\prompt;
@@ -23,15 +23,16 @@ function gameInterface(string $instructions, callable $get_question_data)
 
     $number_question = 3;
 
-    $questions_repeater = function ($number_repeat_question) use ($name, $get_question_data) {
-        $number_last_question = $number_repeat_question - 1;
+    // Определяем неверный результат
+    $define_false_answer = function ($question_data, $user_answer): string {
+        return $question_data['false_answer'] !== null
+            ? (string) $question_data['false_answer']
+            : (string) $user_answer;
+    };
 
-        // Определяем неверный результат
-        $define_false_answer = function ($question_data, $user_answer): string {
-            return $question_data['false_answer'] !== null
-                        ? (string) $question_data['false_answer']
-                        : (string) $user_answer;
-        };
+    // Повторитель вопросов
+    $questions_repeater = function ($number_repeat_question) use ($name, $get_question_data, $define_false_answer) {
+        $number_last_question = $number_repeat_question - 1;
 
         for ($i = 0; $i < $number_repeat_question; $i++) {
             $question_data = $get_question_data();
@@ -51,7 +52,6 @@ function gameInterface(string $instructions, callable $get_question_data)
                 line('Let\'s try again, ' . $name . '!');
                 break;
             }
-
 
             line('Correct!');
 

@@ -31,14 +31,34 @@
 
     `source .bashrc`
     
-`brain-gdc` инструкция
     
-[![asciicast](https://asciinema.org/a/PnQjCVNlWriIlgOFwiY6LN69d.svg)](https://asciinema.org/a/PnQjCVNlWriIlgOFwiY6LN69d)
+    
+Установка пакета
 
-`brain-progressive` инструкция
+[![asciicast](https://asciinema.org/a/neUYZWgDNwozJRB6FsJTNGIuG.svg)](https://asciinema.org/a/neUYZWgDNwozJRB6FsJTNGIuG)
+    
+    
+brain-calc
 
-[![asciicast](https://asciinema.org/a/HSCUfQCk0Pv0apeQEDG3OyBxo.svg)](https://asciinema.org/a/HSCUfQCk0Pv0apeQEDG3OyBxo)
+[![asciicast](https://asciinema.org/a/A6LTrbohU1P1QL8WOxS4fS2ES.svg)](https://asciinema.org/a/A6LTrbohU1P1QL8WOxS4fS2ES)
 
-`brain-prime` инструкция
+brain-even
 
-[![asciicast](https://asciinema.org/a/awN0SinTb19qJBV1zfma2CEah.svg)](https://asciinema.org/a/awN0SinTb19qJBV1zfma2CEah)
+[![asciicast](https://asciinema.org/a/M3qfUy8upzsOPR1NtA3kidkhK.svg)](https://asciinema.org/a/M3qfUy8upzsOPR1NtA3kidkhK)
+
+    
+brain-gdc
+    
+[![asciicast](https://asciinema.org/a/EIZIeqG7FErBXRXbEWtv4aT7u.svg)](https://asciinema.org/a/EIZIeqG7FErBXRXbEWtv4aT7u)
+
+
+brain-prime
+
+[![asciicast](https://asciinema.org/a/uQWrbnZT4KeMCnpwyArrjJ2En.svg)](https://asciinema.org/a/uQWrbnZT4KeMCnpwyArrjJ2En)
+
+brain-progression
+
+[![asciicast](https://asciinema.org/a/sp72DRD4KVuqyXwBWT5RP5QL6.svg)](https://asciinema.org/a/sp72DRD4KVuqyXwBWT5RP5QL6)
+
+
+

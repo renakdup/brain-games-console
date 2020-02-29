@@ -1,5 +1,10 @@
 {
     "name": "renakdup/php-project-lvl1",
+    "description": "Проект Игры разума. Погрузитесь в экосистему PHP, научитесь настраивать рабочее окружение.",
+    "keywords" : [
+        "calc", "even", "brain", "brain games"
+    ],
+    "type": "project",
     "license": "MIT",
     "authors": [
         {
@@ -19,7 +24,7 @@
         "squizlabs/php_codesniffer": "*"
     },
     "autoload": {
-    	"files": ["src/core.php"]
+    	"files": ["src/Core.php"]
     },
     "require-dev": {
     },
