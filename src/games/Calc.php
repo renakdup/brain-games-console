@@ -6,14 +6,11 @@ use function BrainGames\src\Core\gameInterface;
 
 const INSTRUCTION = 'What is the result of the expression?';
 
-function getSigns()
-{
-    return [
-        '*',
-        '+',
-        '-'
-    ];
-}
+const SINGS = [
+    '*',
+    '+',
+    '-'
+];
 
 function calculate($number1, $number2, $sign)
 {
@@ -40,8 +37,7 @@ function getQuestionAndTrueAnswer()
     $number2 = rand(0, 10);
 
     $getRandSign = function () {
-        $sings = getSigns();
-        return array_rand(array_flip($sings));
+        return array_rand(array_flip(SINGS));
     };
 
     $sign = $getRandSign();
@@ -58,11 +54,9 @@ function getQuestionAndTrueAnswer()
 
 function run()
 {
-    $instructions = INSTRUCTION;
-
-    $getQuestionData = function () {
+    $getData = function () {
         return getQuestionAndTrueAnswer();
     };
 
-    gameInterface($instructions, $getQuestionData);
+    gameInterface(INSTRUCTION, $getData);
 }

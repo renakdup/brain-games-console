@@ -29,18 +29,16 @@ function getQuestionAndTrueAnswer()
     $trueAnswer = getGdc($number1, $number2);
 
     return [
-        'question'     => $question,
+        'question'    => $question,
         'trueAnswer'  => (string) $trueAnswer,
     ];
 }
 
 function run()
 {
-    $instructions = INSTRUCTION;
-
-    $getQuestionData = function () {
+    $getData = function () {
         return getQuestionAndTrueAnswer();
     };
 
-    gameInterface($instructions, $getQuestionData);
+    gameInterface(INSTRUCTION, $getData);
 }
