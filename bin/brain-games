@@ -1,6 +1,14 @@
 #!/usr/bin/php7.2
 <?php
-require(dirname(__DIR__) . '/vendor/autoload.php');
+
+$file_local = dirname(__DIR__) . '/vendor/autoload.php';
+$file_global = dirname(__DIR__, 3) . '/autoload.php';
+
+if (file_exists($file_local)) {
+    require $file_local;
+} else {
+    require $file_global;
+}
 
 use function \BrainGames\Cli\run;
 
