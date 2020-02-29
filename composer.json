@@ -24,7 +24,14 @@
         "squizlabs/php_codesniffer": "*"
     },
     "autoload": {
-    	"files": ["src/Core.php"]
+    	"files": [
+            "src/Core.php",
+            "src/games/Brain-calc.php",
+            "src/games/Brain-even.php",
+            "src/games/Brain-gdc.php",
+            "src/games/Brain-prime.php",
+            "src/games/Brain-progression.php"
+        ]
     },
     "require-dev": {
     },
