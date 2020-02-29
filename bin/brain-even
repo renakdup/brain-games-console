@@ -10,6 +10,4 @@ if (file_exists($file_local)) {
     require $file_global;
 }
 
-use function \BrainGames\Cli\run;
-
-run('brain-even');
+require __DIR__ . '/../src/games/brain-even.php';
