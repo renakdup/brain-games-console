@@ -1,4 +1,4 @@
-# php-project-lvl1
+# Brain-games
 
 [![Maintainability](https://api.codeclimate.com/v1/badges/5bf57db1d7f8b0a27e4e/maintainability)](https://codeclimate.com/github/renakdup/php-project-lvl1/maintainability)
 
